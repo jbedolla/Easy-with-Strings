@@ -1,6 +1,5 @@
 #BlueJ class context
 comment0.target=StringParser
-comment0.text=\n\ An\ introduction\ to\ Strings\ and\ String\ methods.\n\n\ @author\ Wilhem\ Alcivar\n
 comment1.params=s
 comment1.target=java.lang.String\ upperCaseString(java.lang.String)
 comment1.text=\n\ Takes\ a\ String\ and\ returns\ that\ String\ with\ all\ characters\ uppercased.\n\ E.G.\ cat\ would\ become\ CAT.\ dOnUt\ would\ become\ DONUT.\n\n\ @param\ s\n\ @return\ String\n

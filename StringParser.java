@@ -4,6 +4,7 @@
  *
  * @author Wilhem Alcivar
  */
+import java.util.*;
 public class StringParser
 {
     /**
@@ -15,7 +16,8 @@ public class StringParser
      */
     public static String upperCaseString(String s)
     {
-        return null;
+        String change = s.toUpperCase();
+        return change;
     }
 
     /**
@@ -26,7 +28,8 @@ public class StringParser
      * @return String
      */
     public static String lowerCaseString(String s) {
-        return null;
+        
+        return s.toLowerCase();
     }
 
     /**
@@ -37,7 +40,10 @@ public class StringParser
      * @return String
      */
     public static Character getFirstCharacter(String s) {
-        return null;
+        
+        char first = s.charAt(0);
+        return first;
+        
     }
 
     /**
@@ -49,7 +55,8 @@ public class StringParser
      * @return String
      */
     public static Character getNthCharacter(String s, Integer n) {
-        return null;
+        char num = s.charAt(n);
+        return num;
     }
 
     /**
@@ -60,7 +67,9 @@ public class StringParser
      * @return String
      */
     public static String upperCaseFirstCharacter(String s) {
-        return null;
+        String change = s.substring(0,1).toUpperCase();
+        String nameCap = change + s.substring(1);
+        return nameCap;
     }
 
     /**
@@ -72,7 +81,12 @@ public class StringParser
      * @return String
      */
     public static String camelCaseString(String s) {
-        return null;
+        s = s.toLowerCase();
+        int index = s.indexOf(" ") + 1;
+        
+        s = s.substring(0,1).toUpperCase() +  s.substring(1,index -1)+ s.substring(index, index +1).toUpperCase() + s.substring(index +1); 
+
+        return s;
     }
 
     /**
@@ -84,7 +98,12 @@ public class StringParser
      * @return String
      */
     public static String snakeCaseString(String s) {
-        return null;
+        
+        String val = s.toLowerCase();
+
+        val = val.replaceAll(" ","_");
+        
+        return val;
     }
 
     /**
@@ -95,7 +114,9 @@ public class StringParser
      * @return String
      */
     public static Integer getLength(String s) {
-        return null;
+        
+        int quantity = s.length();
+        return quantity;
     }
 
     /**
@@ -109,7 +130,11 @@ public class StringParser
      * @return String
      */
     public static Boolean isEqual(String s1, String s2) {
-        return null;
+        if(s1.equals(s2))
+        {
+            return true;
+        }
+            return false;
     }
 
     /**
@@ -123,6 +148,10 @@ public class StringParser
      * @return String
      */
     public static Boolean isEqualIgnoreCase(String s1, String s2) {
-        return null;
+        if(s1.equalsIgnoreCase(s2))
+        {
+            return true;
+        }
+        return false;
     }
 }
